@@ -1,6 +1,19 @@
     <h1>{{title}}</h1>
     <h2>My First Angular 2 App</h2>
     <div [style.color]="wardsColor">
-      Hello {{name}}
+      Hello {{name}} and {{name2}}
     </div>
+    <form>
+        <input type="text" [value]=name (blur)="name=$event.target.value">
+        <input type="text" [(ngModel)]="name2" name="name2">
+    </form>
+    <p>
     <button (click)="changeColor()">Change Color</button>
+    </p>
+
+<ul>
+    <li *ngFor="let customer of customers">
+        <span [style.color]="wardsColor">{{customer.id}}</span>
+        <span>{{customer.name}}</span>
+    </li>
+</ul>

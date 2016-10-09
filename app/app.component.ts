@@ -2,6 +2,14 @@ import { Component } from '@angular/core';
 
 @Component({
     selector: 'my-app',
-    template: '<h1>My First Anqular 2.0 zApp</h1>'
+    templateUrl: 'app/app.component.html'
 })
-export class AppComponent { }
+export class AppComponent { 
+    title = 'Customer App';
+    name = "John";
+    wardsColor = "red";
+
+    changeColor() {
+        this.wardsColor = this.wardsColor === "blue" ? "red" : "blue";
+    }
+}
